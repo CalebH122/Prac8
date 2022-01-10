@@ -10,7 +10,7 @@ class SilverServiceTaxi(Taxi):
         self.price_per_km = Taxi.price_per_km * self.fanciness
 
     def get_fare(self):
-        pass
+        return super().get_fare() + self.flagfall
 
     def __str__(self):
-        pass
+        return f"{super().__str__()} plus flagfall of ${self.flagfall}"
